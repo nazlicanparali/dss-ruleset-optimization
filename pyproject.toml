@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dss-ruleopt"
+version = "0.1.0"
+description = "Statistical checks for traffic-light decision rules, demo on Home Credit Default Risk data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Nazlıcan Paralı" }]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "kaggle>=1.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
